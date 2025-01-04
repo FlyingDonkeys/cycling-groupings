@@ -5,8 +5,9 @@ import makeGroups as mg
 
 def main():
 
+    numberOfGroups = input("How many ELs are taking part in this event? ")
     # Path to input file
-    input_file = "CSV Files/FormSubmissions (1).csv"
+    input_file = "CSV Files/FormSubmissions (2).csv"
 
     # Read the input CSV, note that NUSync imported forms start column titles on row 3
     df = pd.read_csv(input_file, header=1)
@@ -16,14 +17,14 @@ def main():
     # Extract the members of each group
     groups = []
     for groupName in groupNames:
-        members = []
+        members = [[groupName]]
         for row in df.itertuples():
             if row._30 == groupName:
-                members.append(row._22)
+                members.append(row._22) # Note full name is stored in column _22
         groups.append(members)
 
     # Group participants by skill level
-    groupingsdf = mg.makeGroups(df, groups)
+    groupingsdf = mg.makeGroups(df, groups, numberOfGroups)
 
     # Save the output CSV
     output_file = "CSV Files/Output.csv"

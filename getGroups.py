@@ -13,10 +13,8 @@ def getGroups(df):
     """
 
     # Note df is the dataframe object
-    questiontext = "If you are signing up as an INDIVIDUAL,please indicate \"Individual\".If you are signing up with a GROUP,please follow the steps below:(1a) If you are the leader: Create and key in a group code to be shared between your group only. (Do ensure that it is unique enough!)(1b) If you are a member: Key in the group code shared by your leader. Note: Please ensure that you enter the exact group code provided by your friend/team leader,or you might get paired up with other teams instead."
-
     # Extract the groups tags present
-    groups = df[questiontext].tolist()
+    groups = df["Group Code"].tolist()
 
     newGroups = []
     for tag in groups:

@@ -1,3 +1,5 @@
+import math
+
 import pandas as pd
 import getGroups as gg
 import makeGroups as mg
@@ -5,7 +7,8 @@ import makeGroups as mg
 
 def main():
 
-    numberOfGroups = input("How many ELs are taking part in this event? ")
+    # Extract number of ELs
+    numberOfELs = int(input("Enter the number of ELs for this event: "))
     # Path to input file
     input_file = "CSV Files/FormSubmissions (2).csv"
 
@@ -13,6 +16,8 @@ def main():
     df = pd.read_csv(input_file, header=1)
     # Extract the distinct group names as a list
     groupNames = gg.getGroups(df)
+    # Calculate maximum group size for this event
+    maxGroupSize = math.ceil(len(df) / numberOfELs)
 
     # Extract the members of each group
     groups = []
@@ -24,7 +29,7 @@ def main():
         groups.append(members)
 
     # Group participants by skill level
-    groupingsdf = mg.makeGroups(df, groups, numberOfGroups)
+    groupingsdf = mg.makeGroups(df, groups, maxGroupSize)
 
     # Save the output CSV
     output_file = "CSV Files/Output.csv"

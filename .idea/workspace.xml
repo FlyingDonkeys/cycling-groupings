@@ -127,7 +127,7 @@
       <workItem from="1735969416516" duration="89000" />
       <workItem from="1736004654736" duration="597000" />
       <workItem from="1736005258087" duration="2709000" />
-      <workItem from="1736089614861" duration="417000" />
+      <workItem from="1736089614861" duration="1258000" />
     </task>
     <servers />
   </component>
@@ -136,6 +136,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Auto_Grouper$getGroups.coverage" NAME="getGroups Coverage Results" MODIFIED="1735923477366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Auto_Grouper$main.coverage" NAME="main Coverage Results" MODIFIED="1736089723106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Auto_Grouper$main.coverage" NAME="main Coverage Results" MODIFIED="1736090766804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

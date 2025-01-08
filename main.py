@@ -10,7 +10,7 @@ def main():
     # Extract number of ELs
     numberOfELs = int(input("Enter the number of ELs for this event: "))
     # Path to input file
-    input_file = "CSV Files/FormSubmissions (2).csv"
+    input_file = "Input.csv"
 
     # Read the input CSV, note that NUSync imported forms start column titles on row 3
     df = pd.read_csv(input_file, header=1)
